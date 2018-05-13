@@ -1,0 +1,75 @@
+.header {
+  background: #A3A8AF;
+  color: darken(#8C9299, 35%);
+  margin-top: 50px;
+  border-radius: 3px 3px 0 0;
+
+  &__title {
+    text-align: center;
+
+    h1 {
+      margin: 0;
+      padding: 22px 0;
+    }
+  }
+  &__sections {
+    background: darken(#A3A8AF, 5%);
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+
+    & > * {
+      border-right: 1px solid darken(#8C9299, 20%);
+      padding: 16px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &--rank {
+      flex-basis: 10%;
+    }
+    &--name {
+      flex-basis: 40%;
+      justify-content: flex-start;
+
+      @media screen and (max-width: 620px) {
+        justify-content: center;
+
+      }
+
+      p {
+        padding-left: 10px;
+      }
+    }
+    &--recent {
+      flex-basis: 25%;
+      cursor: pointer;
+      transition: background .3s;
+      padding:10px;
+
+      p {
+         padding: 3px 0;
+         border-bottom: 1px solid transparent;
+       }
+    }
+    &--recent:hover {
+      background: darken(#A3A8AF, 10%);
+    }
+    &--alltime {
+      flex-basis: 25%;
+      border-right: none;
+      transition: background .3s;
+      cursor: pointer;
+      padding:10px;
+
+      p {
+        padding: 3px 0;
+        border-bottom: 1px solid transparent;
+      }
+    }
+    &--alltime:hover {
+      background: darken(#A3A8AF, 10%);
+    }
+  }
+}
